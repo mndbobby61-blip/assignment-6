@@ -1,17 +1,15 @@
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, handleAddToCart }) => {
   return (
-    <div className="card bg-base-100 shadow">
-      <div className="card-body">
-        <h2 className="card-title">{product.name}</h2>
-        <p>${product.price}</p>
+    <div className="border rounded p-4 shadow">
+      <h2 className="font-bold text-lg">{product.name}</h2>
+      <p className="text-gray-500">${product.price}</p>
 
-        <ul className="text-sm text-gray-500">
-          <li>✔ Premium features</li>
-          <li>✔ Lifetime access</li>
-        </ul>
-
-        <button className="btn btn-primary mt-2">Buy Now</button>
-      </div>
+      <button
+        onClick={() => handleAddToCart(product)}
+        className="btn btn-primary w-full mt-3"
+      >
+        Buy Now
+      </button>
     </div>
   );
 };

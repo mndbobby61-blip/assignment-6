@@ -9,16 +9,18 @@ const products = [
   { id: 6, name: "Social Media Kit", price: 39 },
 ];
 
-const Products = () => {
+const Products = ({ handleAddToCart }) => {
   return (
-    <div className="p-10">
-      <h2 className="text-2xl font-bold text-center mb-6">
-        Premium Digital Tools
-      </h2>
+    <div>
+      <h2 className="text-2xl font-bold mb-4">Premium Digital Tools</h2>
 
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-3 gap-4">
         {products.map(product => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard 
+            key={product.id} 
+            product={product} 
+            handleAddToCart={handleAddToCart}
+          />
         ))}
       </div>
     </div>

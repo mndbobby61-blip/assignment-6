@@ -10,12 +10,13 @@ const Hero = () => {
           Access premium AI tools, design assets, templates and productivity software.
         </p>
 
-        <button className="btn btn-primary mr-2">Explore Products</button>
-        <button className="btn btn-outline">Watch Demo</button>
+        <button className="btn btn-primary mr-2
+        bg-purple-600 rounded-full">Explore Products</button>
+        <button className="btn btn-outline border-purple-600 text-purple-600 rounded-full"><img src="/src/assets/Play.png" alt="" />Watch Demo</button>
       </div>
 
       <img
-        src="https://i.ibb.co/6y0hW7p/ai.jpg"
+        src="src/assets/banner.png"
         alt="hero"
         className="rounded"
       />
